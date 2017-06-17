@@ -35,7 +35,6 @@ module Status {
                  bitmap = Ui.loadResource(Rez.Drawables.active);
             } else if (loop == 3) {
                 msg = Goals.getCalories() - Goals.getCaloriesGoal();
-                //msg = info.moveBarLevel-Act.MOVE_BAR_LEVEL_MAX;
                 dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
                 bitmap = Ui.loadResource(Rez.Drawables.move);
             }
