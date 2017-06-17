@@ -1,0 +1,9 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="alarms" filename="alarms.png" />
+    <bitmap id="dnd" filename="dnd.png" />
+    <bitmap id="move" filename="move.png" />
+    <bitmap id="active" filename="active.png" />
+    <bitmap id="steps" filename="steps.png" />
+    <bitmap id="floors" filename="floors.png" />
+</drawables>
