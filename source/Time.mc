@@ -30,7 +30,7 @@ module Time {
         var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
         var activePercent = info.activeMinutesWeek.total.toFloat() / info.activeMinutesWeekGoal * 100;
         var movePercent = info.moveBarLevel / Act.MOVE_BAR_LEVEL_MAX * 100;
-        var caloriesPercent = Goals.getCalories() / Goals.getCaloriesGoal() * 100;
+        var caloriesPercent = Goals.getCalories().toFloat() / Goals.getCaloriesGoal().toFloat() * 100;
         
         // 1st digit
         var text = hourString.substring(0, 1);

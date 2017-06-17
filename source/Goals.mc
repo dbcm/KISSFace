@@ -37,7 +37,7 @@ module Goals {
             cals = 1;
         }
         
-        return cals.toFloat();
+        return cals;
     }
     
     function getCaloriesGoal() {
@@ -57,10 +57,10 @@ module Goals {
                 cG = 1;
             }
             
-            return cG.toFloat();
+            return cG;
         } 
         else {
-            return 1.toFloat();
+            return 1;
         }
     }
 

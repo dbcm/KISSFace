@@ -38,6 +38,14 @@ module Status {
                 dc.setColor(Gfx.COLOR_GREEN, Gfx.COLOR_TRANSPARENT);
                 bitmap = Ui.loadResource(Rez.Drawables.move);
             }
+            
+            if (msg > 0) {
+                msg = "+" + msg;
+            }
+            if (msg == 0) {
+                msg = "±" + msg;
+            }
+            
             dc.drawBitmap(cx-50, 197, bitmap);        
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
             dc.drawText(cx-15, 206, Gfx.FONT_SMALL, msg, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_LEFT);
