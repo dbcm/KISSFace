@@ -24,46 +24,33 @@ module Time {
         var minuteString = date.min.format("%02d");
         
         var info = Act.getInfo();
+        
+        // Goals percentage
         var stepsPercent = info.steps.toFloat() / info.stepGoal * 100;
-        //stepsPercent = 33;
         var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
-        //floorsPercent = 26;
         var activePercent = info.activeMinutesWeek.total.toFloat() / info.activeMinutesWeekGoal * 100;
-        //activePercent = 99;
         var movePercent = info.moveBarLevel / Act.MOVE_BAR_LEVEL_MAX * 100;
-        //movePercent = 10;
         var caloriesPercent = Goals.getCalories() / Goals.getCaloriesGoal() * 100;
         
+        // 1st digit
         var text = hourString.substring(0, 1);
-        //text = 8;
         drawDigit(dc, 16, cy-text_height_digit/2, text, stepsPercent, Gfx.COLOR_ORANGE);
-        //dc.drawText(42, cy, Utils.getFont(), text, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_CENTER);
-        
+
+        // 2nd digit
         text = hourString.substring(1, 2);
-        //text = 8;
         drawDigit(dc, 13+text_width_digit, cy-text_height_digit/2, text, floorsPercent, Gfx.COLOR_BLUE);
-        //dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-        //dc.drawText(42+text_width_digit-5, cy, Utils.getFont(), text, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_CENTER);
 
+        // 3rd digit
         text = minuteString.substring(0, 1);
-        //text = 2;
         drawDigit(dc, 20+text_width_digit*2+8, cy-text_height_digit/2, text, activePercent, Gfx.COLOR_RED);
-        //dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
-        //dc.drawText(40+text_width_digit*2+12, cy, Utils.getFont(), text, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_CENTER);
 
+        // 4th digit
         text = minuteString.substring(1, 2);
-        //text = 2;
         drawDigit(dc, 20+text_width_digit*3+5, cy-text_height_digit/2, text, caloriesPercent, Gfx.COLOR_GREEN);
-        //dc.setColor(Gfx.COLOR_PINK, Gfx.COLOR_TRANSPARENT);
-        //dc.drawText(40+text_width_digit*3+8, cy, Utils.getFont(), text, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_CENTER);
-
-        //drawDigit(dc, cy+10, text, floorsPercent, sx+diff, start_y+((off_a+off_b)/2), twd-diff, text_height_digit-off_b-off_a, Gfx.COLOR_BLUE);
 	}
         
     function getHeight(value, goal) {
         var r =  (value * goal / 100);
-
-        //Sys.println("value: "+value+" goal: "+goal+" result: "+r);
 
         if (r > goal) {
             r = goal;
@@ -115,7 +102,6 @@ module Time {
     function genRandom(max) {
         Mt.srand(Sys.getTimer());
         var r = Mt.rand() % max;
-        //Sys.println("RANDOM: "+r);
         return r;
     }
         
