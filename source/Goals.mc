@@ -37,8 +37,7 @@ module Goals {
             cals = 1;
         }
         
-        //Sys.println("Cals:" + cals);
-        return cals;
+        return cals.toFloat();
     }
     
     function getCaloriesGoal() {
@@ -58,12 +57,10 @@ module Goals {
                 cG = 1;
             }
             
-            //Sys.println(calGoal / history.size());
-            return cG;
+            return cG.toFloat();
         } 
         else {
-            //Sys.println("OOOps");
-            return 1;
+            return 1.toFloat();
         }
     }
 
