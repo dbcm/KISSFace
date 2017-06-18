@@ -28,7 +28,7 @@ module Time {
         // Goals percentage
         var stepsPercent = info.steps.toFloat() / info.stepGoal * 100;
         var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
-        var activePercent = info.activeMinutesWeek.total.toFloat() / info.activeMinutesWeekGoal * 100;
+        var activePercent = Goals.getActive().toFloat() / Goals.getActiveGoal().toFloat() * 100;
         var movePercent = info.moveBarLevel / Act.MOVE_BAR_LEVEL_MAX * 100;
         var caloriesPercent = Goals.getCalories().toFloat() / Goals.getCaloriesGoal().toFloat() * 100;
         
