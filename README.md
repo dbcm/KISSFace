@@ -6,6 +6,28 @@ This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 ![KISSFace example][shot1]
 ![KISSFace example][shot2]
 
+# Features
+## time digits
+- 1st digit : ORANGE : steps goal
+- 2nd digit : BLUE : floors goal
+- 3rd digit : RED : activity goal
+- 4th digit : GREEN : calories goal
+
+## others
+- heart rate between 2dn and 3rd digit
+ - WHITE (< 60) 
+ - YELLOW (>60) 
+ - ORANGE (>80) 
+ - RED (>100)
+- status bar with how far you are to goals (show one per minute) 
+ - **¯\\_(o.o)_/¯** if you have reached the move bar limit
+- phone connection icon (blue bluetooth)
+- do not disturb icon
+- alarm set icon
+- batery %
+ - > 50% : GREEN
+ - < 50% : ORANGE
+ - < 30% : thik RED
 
 # Resources / Source of inspiration:
 
