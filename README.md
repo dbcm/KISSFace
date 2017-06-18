@@ -14,20 +14,20 @@ This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 - 4th digit : GREEN : calories goal
 
 ## others
-- heart rate between 2dn and 3rd digit
- - WHITE (< 60) 
- - YELLOW (>60) 
- - ORANGE (>80) 
- - RED (>100)
+- heart rate between 2nd and 3rd digit
+  - WHITE (< 60) 
+  - YELLOW (>60) 
+  - ORANGE (>80) 
+  - RED (>100)
 - status bar with how far you are to goals (show one per minute) 
  - **¯\\_(o.o)_/¯** if you have reached the move bar limit
 - phone connection icon (blue bluetooth)
 - do not disturb icon
 - alarm set icon
 - batery %
- - > 50% : GREEN
- - < 50% : ORANGE
- - < 30% : thik RED
+  - \> 50% : GREEN
+  - < 50% : ORANGE
+  - < 30% : thick RED
 
 # Resources / Source of inspiration:
 
