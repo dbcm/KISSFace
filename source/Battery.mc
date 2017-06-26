@@ -4,7 +4,7 @@ using Toybox.Graphics as Gfx;
 module Battery {
 
     function drawArc(dc, cx, cy) {
-        dc.setPenWidth(2);
+        dc.setPenWidth(3);
         dc.setColor(Gfx.COLOR_GREEN,Gfx.COLOR_TRANSPARENT);
 
         var battery = getBattery();
