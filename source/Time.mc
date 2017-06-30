@@ -29,24 +29,23 @@ module Time {
         var stepsPercent = info.steps.toFloat() / info.stepGoal * 100;
         var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
         var activePercent = Goals.getActive().toFloat() / Goals.getActiveGoal().toFloat() * 100;
-        var movePercent = info.moveBarLevel / Act.MOVE_BAR_LEVEL_MAX * 100;
         var caloriesPercent = Goals.getCalories().toFloat() / Goals.getCaloriesGoal().toFloat() * 100;
         
         // 1st digit
         var text = hourString.substring(0, 1);
-        drawDigit(dc, 16, cy-text_height_digit/2, text, stepsPercent, Gfx.COLOR_ORANGE);
+        drawDigit(dc, 16, cy-text_height_digit/2, text, activePercent, Goals.getActiveColor());
 
         // 2nd digit
         text = hourString.substring(1, 2);
-        drawDigit(dc, 13+text_width_digit, cy-text_height_digit/2, text, floorsPercent, Gfx.COLOR_BLUE);
+        drawDigit(dc, 13+text_width_digit, cy-text_height_digit/2, text, floorsPercent, Goals.getFloorsColor());
 
         // 3rd digit
         text = minuteString.substring(0, 1);
-        drawDigit(dc, 20+text_width_digit*2+8, cy-text_height_digit/2, text, activePercent, Gfx.COLOR_RED);
+        drawDigit(dc, 20+text_width_digit*2+8, cy-text_height_digit/2, text, stepsPercent, Goals.getStepsColor());
 
         // 4th digit
         text = minuteString.substring(1, 2);
-        drawDigit(dc, 20+text_width_digit*3+5, cy-text_height_digit/2, text, caloriesPercent, Gfx.COLOR_GREEN);
+        drawDigit(dc, 20+text_width_digit*3+5, cy-text_height_digit/2, text, caloriesPercent, Goals.getCaloriesColor());
 	}
         
     function getHeight(value, goal) {

@@ -1,8 +1,18 @@
 using Toybox.System as Sys;
 using Toybox.ActivityMonitor as Act;
+using Toybox.Graphics as Gfx;
 
 module Goals {
 
+/*
+  intensity minutes - orange
+  floors climbed - green
+  steps - blue
+  calories burned - red
+*/
+
+
+	// STEPS
 	function getSteps() {
         return info.steps;
 	}
@@ -11,6 +21,12 @@ module Goals {
         return info.stepGoal;
     }
 
+	function getStepsColor() {
+        return Gfx.COLOR_BLUE;
+	}
+
+
+	// INTENSITY MINUTES
     function getActive() {
         var info = Act.getInfo();
 
@@ -28,7 +44,13 @@ module Goals {
         //Sys.println("Act: " + r);
         return r;
     }
+
+    function getActiveColor() {
+        return Gfx.COLOR_ORANGE;
+	}
+
     
+    // CALORIES BURNED
     function getCalories() {
         var info = Act.getInfo();
         
@@ -63,5 +85,23 @@ module Goals {
             return 1;
         }
     }
+    
+	function getCaloriesColor() {
+        return Gfx.COLOR_RED;
+	}
+    
+
+	// FLOORS CLIMBEd
+	function getFloors() {
+		return info.floorsClimbed;
+	}
+	
+	function getFloorsGoal() {
+		return info.floorsClimbedGoal;
+	}
+	
+	function getFloorsColor() {
+         return Gfx.COLOR_GREEN;
+	}	       
 
 }
