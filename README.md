@@ -3,8 +3,10 @@ Garmin Connect IQ Watch Face, you can install through [Garmin app store](https:/
 
 This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 
-![KISSFace example][shot1]
-![KISSFace example][shot2]
+![KISSFace example][shot1] ![KISSFace example][shot2]
+
+![KISSFace active][shot3] ![KISSFace sleep][shot4] ![KISSFace DND][shot5]
+
 
 # Features
 ## time digits
@@ -28,6 +30,8 @@ This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
     - \> 50% : GREEN
     - < 50% : ORANGE
     - < 30% : thick RED
+- visual movebar (under the clock)
+- white text goes dark if device is in **Sleep** mode or **Do Not Disturb** state
 
 # Resources / Source of inspiration:
 
@@ -44,3 +48,6 @@ This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 
 [shot1]: shots/shot1.png
 [shot2]: shots/shot2.png
+[shot3]: shots/shot3.png
+[shot4]: shots/shot4.png
+[shot5]: shots/shot5.png
