@@ -53,6 +53,9 @@ class KISSFaceView extends Ui.WatchFace {
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
         dc.clear();
 
+		// movebar
+		Movebar.drawBar(dc, cx, cy);
+
         // show time
         Time.drawText(dc, cx, cy);
 
@@ -84,7 +87,6 @@ class KISSFaceView extends Ui.WatchFace {
 
         // show status
         Status.drawText(dc, cx, cy, loop);
-
     }
 
     // Called when this View is removed from the screen. Save the
