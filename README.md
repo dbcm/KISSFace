@@ -1,5 +1,5 @@
 # KISSFace
-Garmin Connect IQ Watch Face
+Garmin Connect IQ Watch Face, you can install through [Garmin app store](https://apps.garmin.com/en-US/apps/8f2dc82b-072e-4175-98e7-fb642aa87d4c)
 
 This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 
@@ -8,10 +8,10 @@ This is my first tryout with Monkey C and Connect IQ Watch Face, WIP.
 
 # Features
 ## time digits
-- 1st digit : ORANGE : steps goal
-- 2nd digit : BLUE : floors goal
-- 3rd digit : RED : activity goal
-- 4th digit : GREEN : calories goal
+- 1st digit : ORANGE : Intensity minutes goal
+- 2nd digit : GREEN : floors climbed goal
+- 3rd digit : BLUE : Steps goal
+- 4th digit : RED : Calories burned goal
 
 ## others
 - heart rate between 2nd and 3rd digits
