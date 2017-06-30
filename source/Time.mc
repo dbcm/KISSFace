@@ -69,7 +69,9 @@ module Time {
         
         var water_line = y+text_height_digit-limit;
 
-        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_WHITE);
+		var color = Utils.getColorMode();
+		dc.setColor(color, color);
+
         dc.fillRectangle(x, y, text_width_digit-5, text_height_digit);
 
         dc.setColor(color, color);
