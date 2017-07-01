@@ -33,19 +33,19 @@ module Time {
         
         // 1st digit
         var text = hourString.substring(0, 1);
-        drawDigit(dc, 16, cy-text_height_digit/2, text, activePercent, Goals.getActiveColor());
+        drawDigit(dc, 16, cy-text_height_digit/2, text, activePercent, Gfx.COLOR_ORANGE);
 
         // 2nd digit
         text = hourString.substring(1, 2);
-        drawDigit(dc, 13+text_width_digit, cy-text_height_digit/2, text, floorsPercent, Goals.getFloorsColor());
+        drawDigit(dc, 13+text_width_digit, cy-text_height_digit/2, text, floorsPercent, Gfx.COLOR_BLUE);
 
         // 3rd digit
         text = minuteString.substring(0, 1);
-        drawDigit(dc, 20+text_width_digit*2+8, cy-text_height_digit/2, text, stepsPercent, Goals.getStepsColor());
+        drawDigit(dc, 20+text_width_digit*2+8, cy-text_height_digit/2, text, stepsPercent, Gfx.COLOR_RED);
 
         // 4th digit
         text = minuteString.substring(1, 2);
-        drawDigit(dc, 20+text_width_digit*3+5, cy-text_height_digit/2, text, caloriesPercent, Goals.getCaloriesColor());
+        drawDigit(dc, 20+text_width_digit*3+5, cy-text_height_digit/2, text, caloriesPercent, Gfx.COLOR_GREEN);
 	}
         
     function getHeight(value, goal) {
@@ -68,8 +68,8 @@ module Time {
         
         var water_line = y+text_height_digit-limit;
 
-		var color = Utils.getColorMode();
-		dc.setColor(color, color);
+		var colorBack = Utils.getColorMode();
+		dc.setColor(colorBack, colorBack);
 
         dc.fillRectangle(x, y, text_width_digit-5, text_height_digit);
 
