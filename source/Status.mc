@@ -20,7 +20,7 @@ module Status {
         if (info.moveBarLevel == Act.MOVE_BAR_LEVEL_MAX) {
         //if (1) {
             msg = "¯\\_(o.o)_/¯";
-            dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+            dc.setColor(Utils.getColorMode(), Gfx.COLOR_BLACK);
             dc.drawText(cx, 206, Gfx.FONT_SMALL, msg, Gfx.TEXT_JUSTIFY_VCENTER | Gfx.TEXT_JUSTIFY_CENTER);
         }
         else {

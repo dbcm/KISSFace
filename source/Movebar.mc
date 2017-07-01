@@ -31,7 +31,7 @@ module Movebar {
 		switch(lev) {
 			case 5:
 		        dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT);
-				printPos(dc, cx, cy, " _ _ _ _ _ ", Gfx.TEXT_JUSTIFY_CENTER);
+				printPos(dc, cx, cy, " __ __ __ __ __ ", Gfx.TEXT_JUSTIFY_CENTER);
 				break;
 			case 4:
 		        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
@@ -59,13 +59,13 @@ module Movebar {
 				break;
 			case 0:
 		        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-				printPos(dc, cx, cy, " _ _ _ _ _ ", Gfx.TEXT_JUSTIFY_CENTER);
+				printPos(dc, cx, cy, " __ __ __ __ __ ", Gfx.TEXT_JUSTIFY_CENTER);
 				break;
 		}
 
 	}
 
 	function printPos(dc, cx, cy, msg, pos) {
-        dc.drawText(cx, cy+57, Gfx.FONT_LARGE, msg, Gfx.TEXT_JUSTIFY_VCENTER | pos);
+        dc.drawText(cx, cy+58, Gfx.FONT_LARGE, msg, Gfx.TEXT_JUSTIFY_VCENTER | pos);
 	}
 }

@@ -26,7 +26,7 @@ module HeartRate {
              dc.setColor(Gfx.COLOR_YELLOW, Gfx.COLOR_TRANSPARENT);
         }
         else {
-             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+             dc.setColor(Utils.getColorMode(), Gfx.COLOR_TRANSPARENT);
         }
 
         var hStr = heart_rate.toString();
