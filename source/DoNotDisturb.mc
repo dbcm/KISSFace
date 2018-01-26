@@ -12,7 +12,11 @@ module DoNotDisturb {
 	}
     
     function isDND() {
-        return Sys.getDeviceSettings().doNotDisturb;
+        if (Sys.getDeviceSettings() has :doNotDisturb) {
+	        return Sys.getDeviceSettings().doNotDisturb;
+        } else {
+            return null;
+        }
     }
     
     function isSleepy() {

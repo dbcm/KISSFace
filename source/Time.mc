@@ -27,9 +27,26 @@ module Time {
         
         // Goals percentage
         var stepsPercent = info.steps.toFloat() / info.stepGoal * 100;
-        var floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
-        var activePercent = Goals.getActive().toFloat() / Goals.getActiveGoal().toFloat() * 100;
+        
+        
+        var floorsPercent;
+        if (info has :floorsClimbed && info has :floorsClimbedGoal) {
+        		floorsPercent = info.floorsClimbed.toFloat() / info.floorsClimbedGoal * 100;
+        }
+        else {
+            floorsPercent = stepsPercent;
+        }
+  
         var caloriesPercent = Goals.getCalories().toFloat() / Goals.getCaloriesGoal().toFloat() * 100;
+  
+        var activePercent;
+		if (info has :activeMinutesWeek && info has :activeMinutesWeekGoal) {
+        		activePercent = Goals.getActive().toFloat() / Goals.getActiveGoal().toFloat() * 100;
+        }
+        else {
+        		activePercent = caloriesPercent;
+        }
+        
         
         // 1st digit
         var text = hourString.substring(0, 1);
